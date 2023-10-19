@@ -193,17 +193,15 @@ inflation_rates.csv = https://fred.stlouisfed.org/series/UIGFULL
 
 The real estate sector, specifically the housing market, plays a pivotal role in shaping a nation's economic trajectory. It holds sway over critical economic indicators like growth rate, employment generation, and patterns in consumer spending. For most people, buying a house is among the most significant financial decisions they will ever make. This decision is influenced by a myriad of factors, some broad in scope like macroeconomic variables, and others more specific to the individual property.
 
-Macroeconomic indicators like interest rates and inflation rate can influence the housing market in profound ways. According to a study by Poterba (1984), interest rates, in particular, have a strong negative correlation with housing prices. When interest rates are high, mortgage costs rise, making houses less affordable and thus leading to a drop in demand and prices[^1^]. Additionally, inflation can erode purchasing power, making real estate a more attractive investment as a hedge against inflation, which could drive up demand and prices[^2^].
+Macroeconomic indicators like interest rates and inflation rate can influence the housing market in profound ways. According to a study by Poterba (1984), interest rates, in particular, have a strong negative correlation with housing prices. When interest rates are high, mortgage costs rise, making houses less affordable and thus leading to a drop in demand and prices. Additionally, inflation can erode purchasing power, making real estate a more attractive investment as a hedge against inflation, which could drive up demand and prices[^1^].
 
-On the micro level, the characteristics of the property itself, such as its size, age, condition, location, and other attributes, significantly impact its market value. As reported by Clapp, Rodrigues, and Ross (1997), a house's age can affect its price due to factors like wear and tear, design outdatedness, and the evolving preferences of homebuyers[^3^]. Location, often touted as the most crucial factor in real estate, can determine accessibility to essential services, quality of schools, and overall desirability, all of which impact price. As the inflation rate is less and mortgage rate less house price is expensive.
+On the micro level, the characteristics of the property itself, such as its size, age, condition, location, and other attributes, significantly impact its market value. As reported by Clapp, Rodrigues, and Ross (1997), a house's age can affect its price due to factors like wear and tear, design outdatedness, and the evolving preferences of homebuyers. Location, often touted as the most crucial factor in real estate, can determine accessibility to essential services, quality of schools, and overall desirability, all of which impact price. As the inflation rate is less and mortgage rate less house price is expensive.
 
 Thus, making an informed decision on when to buy a house demands a thorough understanding of both these macroeconomic indicators and property-specific attributes. By studying historical housing sales data, potential buyers and investors can discern patterns, trends, and preferences that can guide their decisions, ensuring that they get the best value for their money and make a sound investment.
 
 ### References
 
-[^1^]: Poterba, J. M. (1984). _Tax subsidies to owner-occupied housing: an asset-market approach_. Quarterly Journal of Economics, 99(4), 729-752.
-[^2^]: Goodman, A. C., & Thibodeau, T. G. (2008). _Where are the speculative bubbles in US housing markets?_ Journal of Housing Economics, 17(2), 117-137.
-[^3^]: Clapp, J. M., Rodrigues, M., & Ross, S. L. (1997). _The impact of building age on residential price_. Journal of Urban Economics, 42(3), 310-334.
+[^1^]: Goodman, A. C., & Thibodeau, T. G. (2008). _Where are the speculative bubbles in US housing markets?_ Journal of Housing Economics, 17(2), 117-137.
 
 ## Data Transformation
 
