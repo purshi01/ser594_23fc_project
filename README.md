@@ -43,7 +43,7 @@ Welcome to the SER594_23FC_PROJECT-1 repository! This project focuses on analyzi
 
    ```bash
    git clone [https://github.com/purshi01/ser594_23fc_project.git]
-   cd SER594_23FC_PROJECT-1
+   cd SER594_23FC_PROJECT
    pip3 install -r requirements.txt
    ```
 
