@@ -60,10 +60,13 @@ def process():
   mode_value = df["MasVnrType"].mode().iloc[0] if not df["MasVnrType"].mode().empty else "None"
   df["MasVnrType"].fillna(mode_value, inplace=True)
 
-    # Fill in missing values in the `MasVnrType` column with the most common value.
+  # Fill in missing values in the `MasVnrType` column with the most common value.
   mode_value = df["Alley"].mode().iloc[0] if not df["Alley"].mode().empty else "None"
   df["Alley"].fillna(mode_value, inplace=True)
 
+  # Fill in missing values in the `MasVnrType` column with the most common value.
+  mode_value = df["PoolQC"].mode().iloc[0] if not df["PoolQC"].mode().empty else "None"
+  df["PoolQC"].fillna(mode_value, inplace=True)
 
   # Fill in missing values in the `LotFrontage` column with the mean value.
   df["LotFrontage"].fillna(df["LotFrontage"].mean(), inplace=True)
