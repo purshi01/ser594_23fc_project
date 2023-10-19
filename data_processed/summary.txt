@@ -1,0 +1,53 @@
+*************quantitative features*************
+
+Feature: OverallCond
+Min: 4
+Max: 7
+Median: 5.0
+
+Feature: YearBuilt
+Min: 1885
+Max: 2010
+Median: 1973.0
+
+Feature: TotalBsmtSF
+Min: 190
+Max: 1869
+Median: 991.0
+
+Feature: GrLivArea
+Min: 334
+Max: 2601
+Median: 1464.0
+
+Feature: SalePrice
+Min: 55000
+Max: 255000
+Median: 163000.0
+
+Feature: mortgage_interest
+Min: 4.6898
+Max: 6.4133
+Median: 6.0272
+
+Feature: inflation_rates
+Min: 0.1662
+Max: 2.9006
+Median: 2.6616
+
+*************qualitative features*************
+
+Feature: Neighborhood
+Number of Categories: 25
+Most Frequent: ['NAmes']
+Least Frequent: ['Blueste']
+
+Feature: Street
+Number of Categories: 2
+Most Frequent: ['Pave']
+Least Frequent: ['Grvl']
+
+Feature: HouseStyle
+Number of Categories: 8
+Most Frequent: ['1Story']
+Least Frequent: ['2.5Fin']
