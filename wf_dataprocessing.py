@@ -16,46 +16,54 @@ def process():
   df = pd.DataFrame(df)
 
   # Extract the year from the "DATE" column in the mortgage_interest dataset
-  mortgage_interest['Year'] = pd.to_datetime(mortgage_interest['DATE']).dt.year
+  mortgage_interest["Year"] = pd.to_datetime(mortgage_interest["DATE"]).dt.year
 
   # Group and calculate the mean for mortgage interest rates by year
-  mortgage_interest = mortgage_interest.groupby('Year')['MORTGAGE30US'].mean().reset_index()
+  mortgage_interest = mortgage_interest.groupby("Year")["MORTGAGE30US"].mean().reset_index()
 
   # Round the mean values to the nearest integer
-  mortgage_interest['MORTGAGE30US'] = mortgage_interest['MORTGAGE30US'].round(4)
+  mortgage_interest["MORTGAGE30US"] = mortgage_interest["MORTGAGE30US"].round(4)
 
   # Rename the columns in mortgage_interest
-  mortgage_interest = mortgage_interest.rename(columns={'MORTGAGE30US': 'mortgage_interest'})
+  mortgage_interest = mortgage_interest.rename(columns={"MORTGAGE30US": "mortgage_interest"})
 
   # Merge the mortgage interest data into the main DataFrame based on "YrSold" and "Year"
-  df = pd.merge(df, mortgage_interest, how='left', left_on='YrSold', right_on='Year')
+  df = pd.merge(df, mortgage_interest, how="left", left_on="YrSold", right_on="Year")
 
   # Extract the year from the "DATE" column in the inflation_rates dataset
-  inflation_rates['Year'] = pd.to_datetime(inflation_rates['DATE']).dt.year
+  inflation_rates["Year"] = pd.to_datetime(inflation_rates["DATE"]).dt.year
 
   # Group and calculate the mean for inflation rates by year
-  inflation_rates = inflation_rates.groupby('Year')['UIGFULL'].mean().reset_index()
+  inflation_rates = inflation_rates.groupby("Year")["UIGFULL"].mean().reset_index()
 
   # Rename the columns in inflation_rates
-  inflation_rates = inflation_rates.rename(columns={'UIGFULL': 'inflation_rates'})
+  inflation_rates = inflation_rates.rename(columns={"UIGFULL": "inflation_rates"})
 
   # Round the mean values to the nearest integer
-  inflation_rates['inflation_rates'] = inflation_rates['inflation_rates'].round(4)
+  inflation_rates["inflation_rates"] = inflation_rates["inflation_rates"].round(4)
 
   # Merge the inflation rates data into the main DataFrame based on "YrSold" and "Year"
-  df = pd.merge(df, inflation_rates, how='left', left_on='YrSold', right_on='Year')
+  df = pd.merge(df, inflation_rates, how="left", left_on="YrSold", right_on="Year")
 
   # Remove duplicate rows
   df = df.drop_duplicates()
 
   # Drop the redundant "Year" columns
-  df.drop(['Year_x', 'Year_y'], axis=1, inplace=True)
+  df.drop(["Year_x", "Year_y"], axis=1, inplace=True)
+
+  df.drop(["MiscFeature"], axis=1, inplace=True)
 
   # Create a boxplot of the `OverallCond` column.
   sns.boxplot(df["OverallCond"])
 
   # Fill in missing values in the `MasVnrType` column with the most common value.
-  df["MasVnrType"].fillna(df["MasVnrType"].mode(), inplace=True)
+  mode_value = df["MasVnrType"].mode().iloc[0] if not df["MasVnrType"].mode().empty else "None"
+  df["MasVnrType"].fillna(mode_value, inplace=True)
+
+    # Fill in missing values in the `MasVnrType` column with the most common value.
+  mode_value = df["Alley"].mode().iloc[0] if not df["Alley"].mode().empty else "None"
+  df["Alley"].fillna(mode_value, inplace=True)
+
 
   # Fill in missing values in the `LotFrontage` column with the mean value.
   df["LotFrontage"].fillna(df["LotFrontage"].mean(), inplace=True)
@@ -292,28 +300,28 @@ def process():
   # Convert the `BsmtCond` column to a numerical variable.
   list_ls = list(df["BsmtCond"])
   for el in range(len(list_ls)):
-    if list_ls[el] == 'Ex':
+    if list_ls[el] == "Ex":
       list_ls[el] = 5
-    elif list_ls[el] == 'Gd':
+    elif list_ls[el] == "Gd":
       list_ls[el] = 4
-    elif list_ls[el] == 'TA':
+    elif list_ls[el] == "TA":
       list_ls[el] = 3
-    elif list_ls[el] == 'Fa':
+    elif list_ls[el] == "Fa":
       list_ls[el] = 2
-    elif list_ls[el] == 'Po':
+    elif list_ls[el] == "Po":
       list_ls[el] = 1
   df["BsmtCond"] = list_ls
 
   # Convert the `BsmtExposure` column to a numerical variable.
   list_ls = list(df["BsmtExposure"])
   for el in range(len(list_ls)):
-    if list_ls[el] == 'Gd':
+    if list_ls[el] == "Gd":
       list_ls[el] = 3
-    elif list_ls[el] == 'Av':
+    elif list_ls[el] == "Av":
       list_ls[el] = 2
-    elif list_ls[el] == 'Mn':
+    elif list_ls[el] == "Mn":
       list_ls[el] = 1
-    elif list_ls[el] == 'No':
+    elif list_ls[el] == "No":
       list_ls[el] = 0
   df["BsmtExposure"] = list_ls
 
