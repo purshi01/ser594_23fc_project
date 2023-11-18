@@ -1,29 +1,14 @@
 *************quantitative features*************
 
-Feature: OverallCond
-Min: 4
-Max: 7
-Median: 5.0
-
-Feature: YearBuilt
-Min: 1885
+Feature: YrSold
+Min: 2006
 Max: 2010
-Median: 1973.0
+Median: 2008.0
 
-Feature: TotalBsmtSF
-Min: 190
-Max: 1869
-Median: 991.0
-
-Feature: GrLivArea
-Min: 334
-Max: 2601
-Median: 1464.0
-
-Feature: SalePrice
-Min: 55000
-Max: 255000
-Median: 163000.0
+Feature: MoSold
+Min: 1
+Max: 12
+Median: 6.0
 
 Feature: mortgage_interest
 Min: 4.6898
@@ -34,6 +19,56 @@ Feature: inflation_rates
 Min: 0.1662
 Max: 2.9006
 Median: 2.6616
+
+Feature: OverallQual
+Min: 1
+Max: 10
+Median: 6.0
+
+Feature: OverallCond
+Min: 1
+Max: 9
+Median: 5.0
+
+Feature: GrLivArea
+Min: 334
+Max: 5642
+Median: 1464.0
+
+Feature: TotalBsmtSF
+Min: 0
+Max: 6110
+Median: 991.5
+
+Feature: GarageCars
+Min: 0
+Max: 4
+Median: 2.0
+
+Feature: GarageArea
+Min: 0
+Max: 1418
+Median: 480.0
+
+Feature: YearBuilt
+Min: 1872
+Max: 2010
+Median: 1973.0
+
+Feature: YearRemodAdd
+Min: 1950
+Max: 2010
+Median: 1994.0
+
+Feature: SalePrice
+Min: 34900
+Max: 755000
+Median: 163000.0
+
+Feature: LotArea
+Min: 1300
+Max: 215245
+Median: 9478.5
 
 *************qualitative features*************
 
@@ -47,7 +82,17 @@ Number of Categories: 2
 Most Frequent: ['Pave']
 Least Frequent: ['Grvl']
 
-Feature: HouseStyle
-Number of Categories: 8
-Most Frequent: ['1Story']
-Least Frequent: ['2.5Fin']
+Feature: PoolQC
+Number of Categories: 3
+Most Frequent: ['Gd']
+Least Frequent: ['Ex', 'Fa']
+
+Feature: Heating
+Number of Categories: 6
+Most Frequent: ['GasA']
+Least Frequent: ['Floor']
+
+Feature: CentralAir
+Number of Categories: 2
+Most Frequent: ['Y']
+Least Frequent: ['N']
