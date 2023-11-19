@@ -108,7 +108,7 @@ DATE: Date for the inflation rate in each year
 UIGFULL: Inflation rate
 
 mortgage_interest.csv
-DATE: Date for the inflation rate in each year
+DATE: Date for the house interest rate in each year
 MORTGAGE30US: mortgage_interest
 
 **Dataset File Hash(es):**
@@ -131,30 +131,35 @@ From data_original.csv :
 1,60,RL,65,8450,Pave,NA,Reg,Lvl,AllPub,Inside,Gtl,CollgCr,Norm,Norm,1Fam,2Story,7,5,2003,2003,Gable,CompShg,VinylSd,VinylSd,BrkFace,196,Gd,TA,PConc,Gd,TA,No,GLQ,706,Unf,0,150,856,GasA,Ex,Y,SBrkr,856,854,0,1710,1,0,2,1,3,1,Gd,8,Typ,0,NA,Attchd,2003,RFn,2,548,TA,TA,Y,0,61,0,0,0,0,NA,NA,NA,0,2,2008,WD,Normal,208500
 
 From inflation_rates.csv:
-1995-01-01,2.8263
+1995-01-01,3.06809
 
 From mortgage_intrestrates.csv:
-1971-04-02,6.0272
+1971-04-02,7.33
 
 **Interpretation:**
 
-Certainly! Based on the provided data, the house in question has several characteristics that are important in determining its price. The property exhibits a moderate level of quality and is well-maintained, with an 'OverallQual' rating of 6 and an 'OverallCond' rating of 8. These ratings indicate that the house is in decent shape and features good-quality materials.
+I have interpreted only important features which are required for this project.
 
-However, it's worth noting that the house was built in 1976 and has not been remodeled since. This means it might lack some modern features or updates, which could have a negative impact on its price.
-
-On the positive side, the property boasts a relatively spacious lot ('LotArea') at 9,600 square feet and has a 2-car attached garage ('GarageCars') with an area of 460 square feet. Larger lots and garages tend to result in higher property values.
-
-The number of bedrooms ('BedroomAbvGr') and bathrooms ('FullBath') is moderate, which should have a neutral effect on the house price.
-
-The neighborhood ('Neighborhood') is 'Veenker,' and the specific desirability of this neighborhood can significantly affect the property's value.
-
-In terms of the roof, the house features a gable roof ('RoofStyle') with standard composite shingles ('RoofMatl'), which is a common and cost-effective choice.
-
-The exterior covering is 'MetalSiding,' and the quality and condition are rated as 'TA,' indicating typical quality.
-
-as the inflation rate is less and mortgage interest rate more house price is expensive.
-
-These factors combined paint a picture of a property that is decently sized, well-kept, and located in a neighborhood that may have varying influences on house prices. The lack of recent remodeling and the age of the house might slightly affect its price, but factors like the lot size and the garage can positively impact its value. Ultimately, the specific housing market and buyer preferences will play a role in determining the house's final price.
+YrSold: The property was sold in 2008.
+MoSold: The sale occurred in February (the 2nd month).
+mortgage_interest: The mortgage interest rate in the year of 1971 was 7.33%.
+inflation_rate: The inflation rate in the year of 1995 was 3.06809%.
+OverallQual: The overall material and finish quality of the house is rated 7 on a scale of 1-10.
+OverallCond: The overall condition of the house is rated 5 on a scale of 1-10.
+GrLivArea: The above-ground living area is 1710 square feet.
+TotalBsmtSF: The total basement area is 856 square feet.
+GarageCars: The garage can hold 2 cars.
+GarageArea: The size of the garage is 548 square feet.
+Neighborhood: The property is located in the 'CollgCr' neighborhood.
+YearBuilt: The house was built in 2003.
+YearRemodAdd: The house was last remodeled or additions made in 2003.
+SalePrice: The property was sold for $208,500.
+Street: The property has paved street access ('Pave').
+PoolArea: The pool area is 0 square feet, indicating no pool.
+PoolQC: Pool quality data is not available (NaN).
+LotArea: The lot size is 8450 square feet.
+Heating: The house is equipped with gas heating ('GasA').
+CentralAir: The property has central air conditioning ('Y').
 
 ### Record 2
 
@@ -165,23 +170,32 @@ From data_original.csv :
 From inflation_rates.csv:
 1995-02-01,2.6616
 
-Frommortgage_intrestrates.csv:
+From mortgage_intrestrates.csv:
 1971-04-09,6.3373
 
-**Interpretation:** It is a one-story, single-family home located in the 'Veenker' neighborhood, which can have a notable impact on property values. The overall quality of the house is rated at 6 ('OverallQual'), and the overall condition is 8 ('OverallCond'), which means it's in decent condition with good-quality materials.
+**Interpretation:**
+I have interpreted only important features which are required for this project.
 
-However, the house was constructed in 1976 and hasn't been remodeled since. This older age may result in a lack of modern updates or features, potentially affecting the property's price negatively.
-
-The property has a relatively spacious lot ('LotArea') of 9,600 square feet, which is often a positive factor in property valuation. It features an attached 2-car garage ('GarageCars') with an area of 460 square feet, another positive aspect as larger garages often lead to higher property values.
-
-The number of bedrooms ('BedroomAbvGr') is three, and the number of full bathrooms ('FullBath') is two. These features are relatively typical and may not significantly influence the house price.
-
-The roof has a gable design ('RoofStyle') with standard composite shingles ('RoofMatl'), which is a common and cost-effective choice.
-
-The exterior covering is 'MetalSiding,' and its quality and condition are rated as 'TA,' indicating typical quality.
-as the inflation rate is less and mortgage interest rate more house price will be affordable.
-
-In summary, this house appears to be of average quality and condition, with a well-maintained exterior and a desirable neighborhood. However, its age and the lack of recent remodeling may slightly impact its price. Other factors, such as the lot size and the garage, are likely to have a more positive effect on its value. The final price will ultimately depend on the specific housing market and buyer preferences.
+YrSold: The property was sold in 2007.
+MoSold: The sale occurred in May.
+mortgage_interest: The mortgage interest rate in the year of 1971 was 6.3373%.
+inflation_rate: The inflation rate in the year of 1995 was 2.6616%.
+OverallQual: The overall material and finish quality of the house is rated as 6 on a scale of 1-10.
+OverallCond: The overall condition of the house is rated as 8 on a scale of 1-10.
+GrLivArea: The above-ground living area is 1,262 square feet.
+TotalBsmtSF: The total basement area is 1,262 square feet.
+GarageCars: The garage can hold 2 cars.
+GarageArea: The size of the garage is 460 square feet.
+Neighborhood: The property is located in the 'Veenker' neighborhood.
+YearBuilt: The house was built in 1976.
+YearRemodAdd: The house was last remodeled or had additions made in 1976.
+SalePrice: The property was sold for $181,500.
+Street: The property has paved street access ('Pave').
+PoolArea: The pool area is 0 square feet, indicating no pool.
+PoolQC: Pool quality data is not available (NaN).
+LotArea: The lot size is 9,600 square feet.
+Heating: The house is equipped with gas heating ('GasA').
+CentralAir: The property has central air conditioning ('Y').
 
 ## Data Sources
 
@@ -239,37 +253,27 @@ Creating new features based on existing ones can sometimes capture the underlyin
 
 ## Visualization
 
-### Visual 1 : Distribution of Overall Condition
+### Visual 1 : Distribution of Neighborhoods
 
 **Analysis:**  
-This visualization provides a histogram of the `OverallCond` column. It gives insights into the frequency distribution of the overall condition of houses in the dataset. This can be useful for understanding how many houses are in a particular condition and might help potential buyers or real estate agents to gauge the general health of houses in the area.
+This chart displays a histogram of the Neighborhood column from the dataset. It illustrates the frequency distribution of houses across different neighborhoods. This analysis is crucial for identifying which areas are more densely populated with listed properties, offering insights into the popularity or residential density of various neighborhoods. Such information could be invaluable to homebuyers, investors, or real estate professionals in understanding regional market trends and identifying areas of high or low housing density.
 
 ### Visual 2 : Relationship Between Overall Condition and Year Built
 
 **Analysis:**  
 The scatter plot provides insight into how the age of a house (`YearBuilt`) relates to its overall condition. Observing any trends here might reveal if older houses tend to be in better or worse condition compared to newer ones. This could be crucial for potential homeowners deciding between buying older, potentially historic homes versus newer constructions.
 
-### Visual 3 : Feature Histograms (TotalBsmtSF, GrLivArea, FullBath, HalfBath, BedroomAbvGr)
+### Visual 3 : Impact of Inflation on House Prices
 
 **Analysis:**  
-The histograms for each of the five selected features provide insights into their distribution across the dataset. These visuals can help determine the typical size of living areas, the common number of bathrooms, or the standard size of basements in the area, among other details.
+This line graph depicts the relationship between house prices (SalePrice) and historical inflation rates (inflation_rates). It aims to show how inflation has possibly influenced the housing market over time. This analysis can be particularly enlightening for economists, real estate investors, and homebuyers in understanding how external economic factors like inflation impact property values, potentially guiding more informed investment or purchasing decisions.
 
-### Visual 4 : Relationship Between Selected above Features and SalePrice
-
-**Analysis:**  
-Scatter plots are created for each of the five features against the sale price of the house. This is useful for understanding how each feature might influence the sale price. For instance, homes with larger living areas might have higher sale prices, or the number of bathrooms could potentially influence a home's market value.
-
-### Visual 5 : Correlation Matrix of Selected above Features with SalePrice
+### Visual 4 : Correlation Between Mortgage Rates and Sale Prices
 
 **Analysis:**  
-The heatmap of the correlation matrix offers a quantitative look into how selected numeric features interrelate with each other and, most importantly, with the sale price. High positive correlations might suggest that as one feature value increases, the sale price tends to increase and vice versa for negative correlations.
+This scatter plot explores the relationship between mortgage rates (mortgage_rates) and house sale prices (SalePrice). It aims to reveal any patterns or correlations between the cost of borrowing (as indicated by mortgage rates) and the prices at which houses are sold. This visual can be particularly valuable for understanding how changes in the financial sector influence the real estate market. It offers insights for homebuyers, investors, and market analysts about the potential impact of fluctuating mortgage rates on housing affordability and investment attractiveness.
 
-### Visual 6 : Mortgage and Inflation Rates Over Time
-
-**Analysis:**  
-This line plot helps visualize the trend of mortgage and inflation rates over the years. By understanding these trends, potential homeowners can make informed decisions about when to buy a house. It can also provide insights into the broader economic conditions over time.
-
-### Visual 7 : Relationship Between SalePrice, Mortgage Rate, and Inflation Rate
+### Visual 5 : Distribution of Heating Quality
 
 **Analysis:**  
-The scatter plots display how the sale price of houses relates to mortgage and inflation rates. This is crucial for understanding if economic factors like inflation or mortgage rates impact the housing market and, if so, to what extent.
+This visualization showcases a histogram of the HeatingQC column from the dataset, which reflects the quality of heating systems in various houses. It highlights the distribution and frequency of different heating quality ratings, ranging from poor to excellent. This analysis is critical for understanding the prevalence of high-quality heating systems in the housing market. It can guide homebuyers, renovators, and real estate professionals in assessing the standard of living comfort and potential investment needed in heating system upgrades or maintenance.
