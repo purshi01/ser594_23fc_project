@@ -1,10 +1,4 @@
 import pandas as pd
-import seaborn as sns
-import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_squared_error
-from sklearn.preprocessing import StandardScaler
 
 def process():
   """
@@ -339,36 +333,6 @@ df["BsmtQual"].fillna(df["BsmtQual"].mean(), inplace=True)
 
 df.to_csv('./data_processed/out.csv', index=False)
 
-selected_features = [
-    'YrSold', 'MoSold', 'mortgage_interest', 'inflation_rates',
-    'OverallQual', 'OverallCond', 'GrLivArea', 'TotalBsmtSF',
-    'GarageCars', 'GarageArea', 'Neighborhood', 'YearBuilt',
-    'YearRemodAdd', 'SalePrice','Street','PoolArea','PoolQC','LotArea','Heating','CentralAir'
-]
-data = pd.get_dummies(df[selected_features])
 
-# Splitting data into features and target
-X = data.drop('SalePrice', axis=1)
-y = data['SalePrice']
-
-# Standardize the features
-scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X)
-
-# Split the data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
-
-# Initialize and train RandomForestRegressor
-model = RandomForestRegressor(n_estimators=100, random_state=42)
-model.fit(X_train, y_train)
-print("model.score() =") 
-print(model.score(X_train, y_train))
-
-# Make predictions on the test set
-y_pred = model.predict(X_test)
-
-# Calculate and print the mean squared error
-mse = mean_squared_error(y_test, y_pred)
-print(f"Mean Squared Error: {mse}")
 
     

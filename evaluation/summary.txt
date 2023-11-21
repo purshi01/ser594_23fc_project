@@ -1,0 +1,5 @@
+                  Dataset           Method  Mean Squared Error  R-squared
+data_processed/X_test.csv LinearRegression        1.281755e+09   0.832894
+data_processed/X_test.csv GradientBoosting        8.369066e+08   0.890890
+data_processed/X_test.csv     RandomForest        9.695212e+08   0.873601
+data_processed/X_test.csv              SVR        7.859365e+09  -0.024645
